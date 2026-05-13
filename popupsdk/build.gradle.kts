@@ -21,6 +21,15 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    buildTypes {
+        release {
+            isMinifyEnabled = true
+            consumerProguardFiles("consumer-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+
+
 }
 
 dependencies {
