@@ -9,7 +9,7 @@ android {
 //            minorApiLevel = 1
 //        }
 //    }
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 26
