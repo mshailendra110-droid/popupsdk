@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    id("maven-publish")
 }
 
 android {
@@ -29,9 +30,15 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    publishing { singleVariant("release") }
+    publishing { singleVariant("release"){
+        withSourcesJar()  // optional but good practice
+    } }
+
 
 }
+
+
+
 
 dependencies {
     implementation(libs.androidx.appcompat)
