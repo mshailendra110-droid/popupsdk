@@ -25,7 +25,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             consumerProguardFiles("consumer-rules.pro")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
@@ -46,7 +46,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.mshailendra110-droid"
                 artifactId = "popupsdk"
-                version = "1.0.4"
+                version = "1.0.5"
             }
         }
     }
