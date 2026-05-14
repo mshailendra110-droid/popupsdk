@@ -46,7 +46,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.mshailendra110-droid"
                 artifactId = "popupsdk"
-                version = "1.0.3"
+                version = "1.0.4"
             }
         }
     }
