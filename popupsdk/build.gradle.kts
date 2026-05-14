@@ -38,7 +38,19 @@ android {
 }
 
 
-
+// ✅ YE BLOCK ADD KARO — BILKUL NAHI THA TUMHARI FILE MEIN
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.mshailendra110-droid"
+                artifactId = "popupsdk"
+                version = "1.0.3"
+            }
+        }
+    }
+}
 
 dependencies {
     implementation(libs.androidx.appcompat)
